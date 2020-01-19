@@ -1,5 +1,3 @@
 Insert saldo awal Dinkes:
 
-psql -h localhost -U persediaan_2019 persediaan_2019 < dinkes_obat.sql
-psql -h localhost -U persediaan_2019 persediaan_2019 < dinkes_bmhp.sql
-psql -h localhost -U persediaan_2019 persediaan_2019 < dinkes_lab.sql
+psql -h localhost -U persediaan_2019 persediaan_2019 <
