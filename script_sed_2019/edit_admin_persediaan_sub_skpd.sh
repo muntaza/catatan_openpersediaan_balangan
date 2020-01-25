@@ -234,3 +234,7 @@ cat admin_sub_skpd.py | sed -e s/SMPN1Awayan/KelurahanParinginTimur/g | sed -e s
 cat admin_sub_skpd.py | sed -e s/SMPN1Awayan/KelurahanParinginKota/g | sed -e s/98/580/g \
     | sed s/id_skpd__exact\=7/id_skpd__exact\=28/g \
     >> admin_gabungan_sub_skpd
+
+#penambahan 2020
+cat admin_sub_skpd.py | sed -e s/SMPN1Awayan/RumahPintar/g | sed -e s/98/338/g >> admin_gabungan_sub_skpd
+cat admin_sub_skpd.py | sed -e s/SMPN1Awayan/TKHarapanBangsa/g | sed -e s/98/225/g >> admin_gabungan_sub_skpd
