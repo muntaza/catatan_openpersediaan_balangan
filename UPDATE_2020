@@ -1,4 +1,7 @@
 rel-1-0:
-    - sudo su postgres
-    - createuser -U postgres -P persediaan_2020
-    - createdb -U postgres -O persediaan_2020 persediaan_2020
+    - buat database persediaan_2020
+	- sudo su postgres
+	- createuser -U postgres -P persediaan_2020
+	- createdb -U postgres -O persediaan_2020 persediaan_2020
+    - restore database persediaan_2020
+	.....
