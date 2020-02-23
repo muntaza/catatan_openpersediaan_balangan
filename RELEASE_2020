@@ -13,6 +13,8 @@ rel-1-0:
     - ganti nama di file wsgi.py -OK-
     - ganti nama di file settings.py -OK-
 	- buat key baru di settings.py -OK-
+	    django-admin startproject latihan
+	- copy key baru "latihan" ke persediaan_2020/settings.py -OK-
     - pembuatan database baru -OK-
 	- sudo su postgres
 	- createuser -U postgres -P persediaan_2020
@@ -22,16 +24,23 @@ rel-1-0:
     - ganti kepemilikan dari persediaan_2019 ke persediaan_2020 -OK-
 	psql -U postgres persediaan_2020
 	REASSIGN OWNED BY persediaan_2019 TO persediaan_2020;
-    - delete isi table persediaan, masuk, keluar dan transaksi -OK-
+    - delete isi table persediaan, masuk, keluar, transaksi dan django_admin_log -OK-
 	persediaan_2020=> delete from persediaan ;
 	persediaan_2020=> delete from masuk;
 	persediaan_2020=> delete from keluar;
 	persediaan_2020=> delete from transaksi;
+	persediaan_2020=> delete from django_admin_log ;
     - rubah judul site
 	- vim templates/admin/base_site.html -OK-
     - edit conf apache
 	- vim /etc/apache2/sites-enabled/default-ssl.conf
     - restart apache
 	- sudo systemctl restart apache2
+    - edit file persediaan.html
     - back up database persediaan_2020
+	pg_dump -U postgres persediaan_2020 > persediaan_2020_db_awal.sql
+    - masukkan file persediaan_2020_db_awal.sql ke catatan_persediaan
+
+
+
 

@@ -3,5 +3,9 @@ rel-1-0:
 	- sudo su postgres
 	- createuser -U postgres -P persediaan_2020
 	- createdb -U postgres -O persediaan_2020 persediaan_2020
+    - cvs up pada catatan_persdiaan
+    - git pull pada catatan_openpersediaan_balangan
     - restore database persediaan_2020
 	.....
+    - edit conf apache2
+    - edit file persediaan.html
