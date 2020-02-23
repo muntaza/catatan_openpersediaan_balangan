@@ -1,0 +1,15 @@
+rel-1-0:
+
+    - copy folder ke persediaan_2020 -OK-
+    - pindah ke tmp -OK-
+    - delete folder CVS -OK-
+	find . -type d -name "CVS" -exec rm -rf {} \; -OK-
+    - buat repo -OK-
+	cvs import -m "start" persediaan_2020 persediaan_2020 start -OK-
+    - cvs co di folder /home/django -OK-
+    - ganti file manage.py -OK-
+    - folder persediaan_2019 di copy ke persediaan_2020 -OK-
+    - cvs remove persediaan_2019, cvs add persediaan_2020 -OK-
+    - ganti nama di file wsgi.py -OK-
+    - ganti nama di file settings.py -OK-
+	- buat key baru di settings.py -OK-
