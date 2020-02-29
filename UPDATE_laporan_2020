@@ -1,0 +1,5 @@
+rel-1-0:
+    - copy folder
+    - mkdir php5_projects_persediaan_balangan_2020
+    - cvs co php5_projects_persediaan_balangan_2020
+    - ln -s
