@@ -37,9 +37,11 @@ rel-1-0:
     - restart apache
 	- sudo systemctl restart apache2
     - edit file persediaan.html
-    - back up database persediaan_2020
-	pg_dump -U postgres persediaan_2020 > persediaan_2020_db_awal.sql
-    - masukkan file persediaan_2020_db_awal.sql ke catatan_persediaan
+    - test md5 -OK-
+    - back up database persediaan_2020 -OK-
+	cd /home/muntaza/tmp -OK-
+	pg_dump -U postgres persediaan_2020 > persediaan_2020_db_awal.sql -OK-
+    - masukkan file persediaan_2020_db_awal.sql ke catatan_persediaan -OK-
 
 
 
