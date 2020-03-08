@@ -41,6 +41,12 @@ rel-1-0:
 	pg_dump -U postgres persediaan_2020 > persediaan_2020_db_awal.sql
     - masukkan file persediaan_2020_db_awal.sql ke catatan_persediaan
 
+rel 1-1:
+    - buat backup persediaan 2020 -OK-
+    - crontab untuk semua backup, backup harian untuk 2020,
+      sedangkan untuk 2019, mingguan, dan 2018 bulanan -OK-
+    - backup global bulanan -OK-
+    - backup ke laptop Asus
 
 
 
