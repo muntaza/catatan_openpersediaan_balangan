@@ -1,0 +1,8 @@
+rel-1-0:
+    - copy folder -OK-
+    - cvs import -OK-
+    - mkdir php5_projects_persediaan_balangan_2020
+    - doas chown -R muntaza:www-data php5_projects_persediaan_balangan_2020/
+    - doas chmod -R g+w php5_projects_persediaan_balangan_2020/
+    - cvs co php5_projects_persediaan_balangan_2020
+    - doas ln -s php5_projects_persediaan_balangan_2020 projects

@@ -1,11 +1,17 @@
 rel-1-0:
-    - buat database persediaan_2020
-	- sudo su postgres
-	- createuser -U postgres -P persediaan_2020
-	- createdb -U postgres -O persediaan_2020 persediaan_2020
-    - cvs up pada catatan_persdiaan
-    - git pull pada catatan_openpersediaan_balangan
-    - restore database persediaan_2020
-	.....
-    - edit conf apache2
-    - edit file persediaan.html
+    - mkdir persediaan_2020 -OK-
+    - doas chown -R muntaza:www persediaan_2020 -OK-
+    - doas chmod -R g+w persediaan_2020 -OK-
+    - cvs co persediaan_2020 -OK-
+    - buat database persediaan_2020 -OK-
+	- sudo su _postgresql
+	- createuser -U _postgresql -P persediaan_2020
+	- createdb -U _postgresql -O persediaan_2020 persediaan_2020
+    - cvs up pada catatan_persediaan -OK-
+    - git pull pada catatan_openpersediaan_balangan -OK-
+    - restore database persediaan_2020 -OK-
+	psql -U _postgresql persediaan_2020 < persediaan_2020_db_awal.sql
+    - edit conf apache2 -OK-
+    - edit file persediaan.html -OK-
+    - restart apache2
+	rcctl restart apache2 -OK-
