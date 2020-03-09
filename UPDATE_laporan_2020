@@ -1,5 +1,16 @@
 rel-1-0:
-    - copy folder
-    - mkdir php5_projects_persediaan_balangan_2020
+    - copy folder php5_laporan_persediaan_2020 -OK-
+    - doas chown -R www:www php5_laporan_persediaan_2020 -OK-
+    - doas rm -rf projects projects_persediaan_2019
+    - doas mkdir php5_projects_persediaan_balangan_2020
+    - doas chown -R muntaza:www php5_projects_persediaan_balangan_2020/
+    - doas chmod -R g+w php5_projects_persediaan_balangan_2020/
+    - doas ln -s php5_projects_persediaan_balangan_2020 projects
     - cvs co php5_projects_persediaan_balangan_2020
-    - ln -s
+    - copy isi folder kabupaten di laporan 2018 ke kabupaten_2018
+    - cvs ci
+    - edit 2019 judul menjadi 2020
+
+rel-1-1:
+    - chmod_plus
+    - cvs up
