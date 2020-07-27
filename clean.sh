@@ -13,3 +13,6 @@ find . -name *.autosave -exec rm -f {} +
 
 find . -name "*lock*"
 find . -name "*lock*" -exec rm -f {} +
+
+find . -name *.swp
+find . -name *.swp -exec rm -f {} +
