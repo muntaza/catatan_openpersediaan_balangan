@@ -1,2 +1,21 @@
-RELEASE rel-1-2:
+rel-1-0:
+    - copy folder -OK-
+    - cvs import -OK-
+    - mkdir php5_projects_persediaan_balangan_2020
+    - doas chown -R muntaza:www-data php5_projects_persediaan_balangan_2020/
+    - doas chmod -R g+w php5_projects_persediaan_balangan_2020/
+    - cvs co php5_projects_persediaan_balangan_2020
+    - doas ln -s php5_projects_persediaan_balangan_2020 projects
+    - copy isi folder kabupaten di laporan 2018 ke kabupaten_2018
+    - cvs tag rel-1-0 -OK-
 
+rel-1-1:
+
+    - edit tahun default pada kabupaten 2020 -OK-
+    - edit tahun default pada SKPD -> 2020 -OK-
+    - cvs tag rel-1-1 -OK-
+    - md5 -OK-
+
+rel-1-2:
+
+    - cvs tag rel-1-2
