@@ -48,7 +48,7 @@ rel 1-1:
     - crontab untuk semua backup, backup harian untuk 2020,
       sedangkan untuk 2019, mingguan, dan 2018 bulanan -OK-
     - backup global bulanan -OK-
-    - backup ke laptop Asus
+    - backup ke laptop Asus -OK-
 
-
-
+rel-2-1:
+    -
