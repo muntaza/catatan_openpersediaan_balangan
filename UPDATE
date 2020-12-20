@@ -15,3 +15,10 @@ rel-1-0:
     - edit file persediaan.html -OK-
     - restart apache2
 	rcctl restart apache2 -OK-
+
+rel-2-2:
+    - cvs up pada persediaan_2020 -OK-
+    - python manage.py migrate -OK-
+    - doas rcctl restart apache2 -OK-
+    - test login apps -OK-
+    - pembuatan group smpnsatuataplibarusungkai -OK-

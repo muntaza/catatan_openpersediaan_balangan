@@ -59,4 +59,15 @@ rel-2-1:
 
 rel-2-2:
     - tambah sekolah
-	SMPN Terpadu Libaru Sungkai
+	SMPN Terpadu Libaru Sungkai -OK-
+
+    - rsync backup persediaan_2020 -OK-
+    - restore global di Development -OK-
+    - restore persediaan_2020 di Development
+    - makemigrations, migrate -OK-
+    - setting apache2 di Development -OK-
+    - test devel -OK-
+    - cvs tag rel-2-2 -OK-
+
+
+
