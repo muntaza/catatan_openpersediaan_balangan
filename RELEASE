@@ -51,4 +51,12 @@ rel 1-1:
     - backup ke laptop Asus -OK-
 
 rel-2-1:
-    -
+    - commit pada production perubahan -OK-
+	rumah pintar dan tk harapan bangsa
+    - cvs tag rel-2-1 -OK-
+    - cvs test prod -OK-
+    - cvs test devel -OK-
+
+rel-2-2:
+    - tambah sekolah
+	SMPN Terpadu Libaru Sungkai
