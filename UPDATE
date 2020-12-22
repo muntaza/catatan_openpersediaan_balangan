@@ -22,3 +22,6 @@ rel-2-2:
     - doas rcctl restart apache2 -OK-
     - test login apps -OK-
     - pembuatan group smpnsatuataplibarusungkai -OK-
+
+rel-2-3:
+    - psql
