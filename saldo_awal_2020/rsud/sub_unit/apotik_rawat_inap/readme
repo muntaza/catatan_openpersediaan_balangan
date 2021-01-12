@@ -8,3 +8,5 @@ jenis keluar = distribusi (Keluar), sub unit = Gudang Farmasi
 masuk dari saldo awal ke gudang farmasi 2 Januari 2020
 masuk ke sub unit 3 Januari 2020
 keluar dari gudang farmasi 3 Januari 2020
+
+#psql -h localhost -U persediaan_2020 persediaan_2020 <
