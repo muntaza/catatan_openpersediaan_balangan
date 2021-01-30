@@ -1,0 +1,45 @@
+rel-1-0:
+    - review sql code untuk sekolah 30 menit -OK-
+	- code kabupaten tidak perlu di eksekusi
+	- id_skpd ganti id_sub_skpd
+	- perlu mengambil data daftar sub_skpd dan id_sub_skpd
+	- view rencananya dinamakan dengan nama_sub_skpd
+	- pembuatan draft script delete.sh untuk membersihkan file script sql
+
+    - data dasar script builder laporan sekolah 45 menit -OK-
+    - buat menu_utama_reporting_tools_sekolah 45 menit -OK-
+	- script buat folder
+	- rubah permisi group:
+	    sudo chown -R :www-data php5_laporan_persediaan_sekolah_2020
+	- buat cvs_add_folder, cvs_add_php, cvs_add_xml -OK-
+	- buat script copy all php file
+	- copy semua scrip php dengan cp_all_php.sh
+	- buat script copy config.php dengan password uniq laporan dan nama_sekolah
+	- edit halaman utama agar tampil link ke laporan_persediaan_sekolah_2020
+	- setting permisi:
+	    sudo chmod -R g+w templates_c
+	- setting file config.php: -OK-
+	    - nama sekolah SDN Ajung
+	    - setting password dan user database
+    - setting password: 45 menit -OK-
+	- buat daftar password semua sekolah -OK-
+	- buat script cp_password_config.cvs
+	- buat script cp_password_config.sh
+	- perbaiki SDN Ju'uh
+	- jalankan script cp_password_config.sh
+	- cek view_buku_penerimaan barang
+    - view sql: 45 menit
+	- rubah pengecualian di delete.sh
+	- buat data awal script builder sql
+	- buat scrip buku_penerimaan_sub_skpd.sh
+	- buat scrip buku_pengeluaran_sub_skpd.sh
+	- testing execute buku_penerimaan_sub_skpd.sh -OK-
+	- buat scrip daftar_penerimaan_sub_skpd.sh -OK-
+	- buat scrip daftar_pengadaan_p_sub_skpd.sh -OK-
+	- buat scrip daftar_pengeluaran_sub_skpd.sh
+	- siapkan folder persediaan_barang_sql{1,2,3,4,5} -OK-
+	
+
+
+
+
