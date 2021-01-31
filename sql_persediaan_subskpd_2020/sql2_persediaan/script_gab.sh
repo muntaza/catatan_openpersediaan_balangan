@@ -1,9 +1,12 @@
-cat gabungan_beban_barang3.sql   > beban_gabung.sql
-cat gabungan_beban_barang4.sql   >> beban_gabung.sql
-cat gabungan_beban_barang5.sql   >> beban_gabung.sql
+#!/bin/sh
 
-cat daftar_barang.sql >> beban_gabung.sql
-cat gabungan_daftar_barang.sql >> beban_gabung.sql
+#script untuk menggabung semua file sql
 
-cat gabungan_beban_rinci_kabupaten.sql >> beban_gabung.sql
-cat gabungan_beban_rekap_kabupaten.sql >> beban_gabung.sql
+echo "-- beban sql2" > beban_gabungan.sql
+echo "" >> beban_gabungan.sql
+
+
+cat gabungan_beban_barang3_sub_skpd.sql >> beban_gabungan.sql
+cat gabungan_beban_barang4_sub_skpd.sql >> beban_gabungan.sql
+cat gabungan_beban_barang5_sub_skpd.sql >> beban_gabungan.sql
+cat gabungan_daftar_barang_sub_skpd.sql >> beban_gabungan.sql

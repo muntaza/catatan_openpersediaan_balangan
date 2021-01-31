@@ -106,6 +106,10 @@ rel-1-0:
 	- execute script gabungan_beban_barang5_sub_skpd.sql
 	- execute delete.sh
 
+	- buat script_gab.sh
+	- execute script_gab.sh
+	- execute beban_gabungan.sql
+
 
 
 
