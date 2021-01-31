@@ -1,10 +1,17 @@
-cat persediaan_barang_masuk.sql > persediaan_gabung.sql
-cat persediaan_barang_keluar.sql  >> persediaan_gabung.sql
-cat gabungan_persediaan_barang.sql   >> persediaan_gabung.sql
-cat gabungan_persediaan_barang2.sql   >> persediaan_gabung.sql
-cat gabungan_persediaan_barang3.sql   >> persediaan_gabung.sql
-cat gabungan_persediaan_barang4.sql   >> persediaan_gabung.sql
-cat gabungan_persediaan_barang5.sql   >> persediaan_gabung.sql
+#!/bin/sh
 
-cat gabungan_persediaan_rinci_kabupaten.sql >> persediaan_gabung.sql
-cat gabungan_persediaan_rekap_kabupaten.sql >> persediaan_gabung.sql
+#script untuk menggabung semua file sql
+
+echo "-- persediaan sql1" > persediaan_gabungan.sql
+
+
+cat gabungan_buku_penerimaan_sub_skpd.sql >> persediaan_gabungan.sql
+cat gabungan_buku_pengeluaran_sub_skpd.sql >> persediaan_gabungan.sql
+cat gabungan_daftar_penerimaan_sub_skpd.sql >> persediaan_gabungan.sql
+cat gabungan_daftar_pengadaan_sub_skpd.sql >> persediaan_gabungan.sql
+cat gabungan_daftar_pengeluaran_sub_skpd.sql >> persediaan_gabungan.sql
+cat gabungan_persediaan_barang1_sub_skpd.sql >> persediaan_gabungan.sql
+cat gabungan_persediaan_barang2_sub_skpd.sql >> persediaan_gabungan.sql
+cat gabungan_persediaan_barang3_sub_skpd.sql >> persediaan_gabungan.sql
+cat gabungan_persediaan_barang4_sub_skpd.sql >> persediaan_gabungan.sql
+cat gabungan_persediaan_barang5_sub_skpd.sql >> persediaan_gabungan.sql

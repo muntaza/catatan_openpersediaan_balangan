@@ -1,1 +1,1 @@
-sql query persediaan
+sql query persediaan sub skpd sekolah
