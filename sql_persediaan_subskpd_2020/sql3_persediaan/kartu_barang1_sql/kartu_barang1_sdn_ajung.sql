@@ -1,6 +1,6 @@
-DROP VIEW IF EXISTS view_kartu_barang_setwan CASCADE;
+DROP VIEW IF EXISTS view_kartu_barang1_sdn_ajung CASCADE;
 
-CREATE VIEW view_kartu_barang_setwan AS
+CREATE VIEW view_kartu_barang1_sdn_ajung AS
 
 SELECT
 nama_provinsi,
@@ -47,7 +47,7 @@ view_persediaan_barang_masuk_kabupaten
 
 WHERE
 1 = 1  AND
-id_skpd = 1
+id_sub_skpd = 355
 
 
 UNION ALL
@@ -100,12 +100,12 @@ view_persediaan_barang_keluar_kabupaten
 
 WHERE
 1 = 1  AND
-id_skpd = 1
+id_sub_skpd = 355
 
 ORDER BY kode_barang, tanggal;
 
 
 
 
-GRANT ALL PRIVILEGES ON view_kartu_barang_setwan TO lap_setwan;
-REVOKE INSERT, UPDATE, DELETE ON view_kartu_barang_setwan FROM lap_setwan;
+GRANT ALL PRIVILEGES ON view_kartu_barang1_sdn_ajung TO lap_disdik;
+REVOKE INSERT, UPDATE, DELETE ON view_kartu_barang1_sdn_ajung FROM lap_disdik;

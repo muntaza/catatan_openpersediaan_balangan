@@ -1,5 +1,11 @@
-cat gabungan_kartu_barang1.sql			>  kartu_gabung.sql
-cat gabungan_kartu_barang2.sql			>> kartu_gabung.sql
-cat gabungan_kartu_barang3.sql			>> kartu_gabung.sql
-cat gabungan_kartu_barang_rinci_kabupaten.sql   >> kartu_gabung.sql
-cat gabungan_kartu_barang_rekap_kabupaten.sql   >> kartu_gabung.sql
+#!/bin/sh
+
+#script untuk menggabung semua file sql
+
+echo "-- kartu sql3" > kartu_gabungan.sql
+echo "" >> kartu_gabungan.sql
+
+
+cat gabungan_kartu_barang1_sub_skpd.sql >> kartu_gabungan.sql
+cat gabungan_kartu_barang2_sub_skpd.sql >> kartu_gabungan.sql
+cat gabungan_kartu_barang3_sub_skpd.sql >> kartu_gabungan.sql
