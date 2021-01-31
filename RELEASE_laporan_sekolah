@@ -38,8 +38,80 @@ rel-1-0:
 	- buat scrip daftar_pengadaan_p_sub_skpd.sh -OK-
 	- buat scrip daftar_pengeluaran_sub_skpd.sh
 	- siapkan folder persediaan_barang_sql{1,2,3,4,5} -OK-
+    - view sql persediaan:
+	- buat script persediaan_barang1_sub_skpd.sh
+	- buat script persediaan_barang1_sdn_ajung.sql
+	- execute script persediaan_barang1_sdn_ajung.sql
+	- test hasil script persediaan_barang1_sdn_ajung.sql pada phpPgAdmin
+	- test entry data pada SDN Ajung: -OK-
+	    - data masuk 2 buah
+	    - data keluar 1 buah
+	- execute persediaan_barang1_sub_skpd.sh
+	- execute delete.sh
+
+	- buat script persediaan_barang2_sub_skpd.sh
+	- buat script persediaan_barang2_sdn_ajung.sql
+	- execute script persediaan_barang2_sdn_ajung.sql
+	- test hasil script persediaan_barang2_sdn_ajung.sql pada phpPgAdmin
+	- execute persediaan_barang2_sub_skpd.sh
+	- execute delete.sh
 	
+	- buat script persediaan_barang3_sub_skpd.sh
+	- buat script persediaan_barang3_sdn_ajung.sql
+	- execute script persediaan_barang3_sdn_ajung.sql
+	- test hasil script persediaan_barang3_sdn_ajung.sql pada phpPgAdmin
+	- execute persediaan_barang3_sub_skpd.sh
+	- execute delete.sh
+	
+	- buat script persediaan_barang4_sub_skpd.sh
+	- buat script persediaan_barang4_sdn_ajung.sql
+	- execute script persediaan_barang4_sdn_ajung.sql
+	- test hasil script persediaan_barang4_sdn_ajung.sql pada phpPgAdmin
+	- execute persediaan_barang4_sub_skpd.sh
+	- execute delete.sh
+	
+	- buat script persediaan_barang5_sub_skpd.sh
+	- buat script persediaan_barang5_sdn_ajung.sql
+	- execute script persediaan_barang5_sdn_ajung.sql
+	- test hasil script persediaan_barang5_sdn_ajung.sql pada phpPgAdmin
+	- execute persediaan_barang5_sub_skpd.sh
+	- execute delete.sh
+    
+	- review id_sub_skpd pada persediaan_barang{1,2,3,4,5}_sub_skpd.sql
+
+    - view_persediaan, view_beban, view_kartu_barang:
+	- buat script_gab.sh view_persediaan
+	- jalankan script_gab.sh
+	- execute persediaan_gabungan.sql
+
+	- buat script beban_barang3_sub_skpd.sql
+	- buat script beban_barang3_sub_skpd.sh
+	- execute script beban_barang3_sub_skpd.sh
+	- execute script gabungan_beban_barang3_sub_skpd.sql
+	- execute delete.sh
+	
+	- buat script beban_barang4_sub_skpd.sql
+	- buat script beban_barang4_sub_skpd.sh
+	- execute script beban_barang4_sub_skpd.sh
+	- execute script gabungan_beban_barang4_sub_skpd.sql
+	- execute delete.sh
+
+	- review persediaan_barang5: 45 menit
+	    - perlu penambahan id_sub_skpd dan sub_skpd -OK-
+	    - execute persediaan_barang5.sql
+
+	- buat script beban_barang5_sub_skpd.sql
+	- buat script beban_barang5_sub_skpd.sh
+	- execute script beban_barang5_sub_skpd.sh
+	- execute script gabungan_beban_barang5_sub_skpd.sql
+	- execute delete.sh
 
 
 
 
+
+
+
+
+
+	
