@@ -134,8 +134,46 @@ rel-1-0:
 	- laporan per sub skpd:
 	    - review laporan per sub_skpd dinas pendidikan
 
-    - front end laporan reportico untuk sekolah:
+    - front end laporan reportico untuk sekolah: 30 menit
 	- copy laporan modul disdik ke sdn_ajung
+	- git push catatan_openpersediaan_balangan
+	- chmod_local_plus.sh
+	- laporan buku_penerimaan_sub_skpd:
+	    - tahun default 2020
+	    - sub skpd default SDN Ajung
+	    - nama qeury dari disdik -> sdn_ajung
+	    - test laporan
+	- laporan buku_pengeluaran_sub_skpd:
+	    - tahun default 2020
+	    - sub skpd default SDN Ajung
+	    - nama qeury dari disdik -> sdn_ajung
+	    - test laporan
+	- laporan buku_persediaan_sub_skpd:
+	    - sub skpd default SDN Ajung
+	    - nama qeury dari disdik -> sdn_ajung
+	    - test laporan
+	- laporan daftar_penerimaan_sub_skpd:
+	    - tahun default 2020
+	    - sub skpd default SDN Ajung
+	    - nama qeury dari disdik -> sdn_ajung
+	    - test laporan
+	- laporan daftar_pengeluaran_sub_skpd:
+	    - tahun default 2020
+	    - sub skpd default SDN Ajung
+	    - nama qeury dari disdik -> sdn_ajung
+	    - test laporan
+	- laporan kartu_barang_sub_skpd:
+	    - sub skpd default SDN Ajung
+	    - nama qeury dari disdik -> sdn_ajung
+	    - test laporan
+	- laporan rekap_kartu_barang_sub_skpd:
+	    - sub skpd default SDN Ajung
+	    - nama qeury dari disdik -> sdn_ajung
+	    - test laporan
+
+
+
+
 
 
 
