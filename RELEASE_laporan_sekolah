@@ -175,9 +175,7 @@ rel-1-0:
 	- buat script cp_buku_penerimaan_sub_skpd.sh
 	- execute script cp_buku_penerimaan_sub_skpd.sh
 	- test laporan SDN Bakung, hasilnya tepat -OK-
-	- buat script cp_buku_pengeluaran_sub_skpd.sh
-	- execute script cp_buku_pengeluaran_sub_skpd.sh
-	- test laporan SMPN 2 Batumandi
+
 	- buat script cp_buku_pengeluaran_sub_skpd.sh
 	- execute script cp_buku_pengeluaran_sub_skpd.sh
 	- test laporan SMPN 2 Batumandi
