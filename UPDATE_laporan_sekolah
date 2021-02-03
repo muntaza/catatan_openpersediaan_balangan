@@ -1,0 +1,13 @@
+rel-1-0:
+
+    - ssh-add cvs user
+    - cp folder laporan
+    - mkdir php5_projects_persediaan_balangan_sekolah_2020 projects
+    - chmod_balangan_plus.sh dan chmod_balangan_min.sh
+    - execute chmod_balangan_plus.sh
+    - doas ln -s php5_projects_persediaan_balangan_sekolah_2020 projects
+    - cvs co project_persediaan_sekolah_2020
+    - psql persediaan_2020 persediaan_gabungan.sql
+    - psql persediaan_2020 beban_gabungan.sql
+    - psql persediaan_2020 kartu_gabungan.sql
+    - testing laporan

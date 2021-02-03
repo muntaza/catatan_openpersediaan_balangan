@@ -180,6 +180,7 @@ rel-1-0:
 	- execute script cp_buku_pengeluaran_sub_skpd.sh
 	- test laporan SMPN 2 Batumandi
 
+	- cvs import projects_persediaan_sekolah_2020
 
 
 
