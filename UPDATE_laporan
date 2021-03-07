@@ -14,3 +14,7 @@ rel-1-0:
 rel-1-1:
     - chmod_plus
     - cvs up
+
+rel-1-2:
+    - chmod_plus
+    - cvs up
