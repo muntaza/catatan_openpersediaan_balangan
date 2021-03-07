@@ -75,4 +75,9 @@ rel-2-3:
     - insert puskesmas paringin:
 
 rel-3-0:
-    
+    - Pembuatan Menu Entry 2021
+	- copy folder persediaan_2020 menjadi persediaan_2021
+	    sudo cp -r persediaan_2020 persediaan_2021 -OK-
+	- hapus folder CVS:
+	    sudo chown -R abdullah:www-data persediaan_2021 -OK-
+	    find . -type d -name "CVS" -exec rm -rf {} +
