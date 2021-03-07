@@ -76,8 +76,27 @@ rel-2-3:
 
 rel-3-0:
     - Pembuatan Menu Entry 2021
-	- copy folder persediaan_2020 menjadi persediaan_2021
-	    sudo cp -r persediaan_2020 persediaan_2021 -OK-
-	- hapus folder CVS:
-	    sudo chown -R abdullah:www-data persediaan_2021 -OK-
+	- copy folder persediaan_2020 menjadi persediaan_2021: -OK-
+	    sudo cp -r persediaan_2020 persediaan_2021 
+	- hapus folder CVS: -OK-
+	    sudo chown -R abdullah:www-data persediaan_2021 
 	    find . -type d -name "CVS" -exec rm -rf {} +
+	- import CVS: -OK-
+	    cvs import -m "start" persediaan_2021 persediaan_2021 start
+	- delete folder persediaan_2021: -OK-
+	    sudo rm -rf persediaan_2021
+	    sudo mkdir persediaan_2021
+	    sudo chown -R abdullah:www-data persediaan_2021
+	- ambil persediaan_2021 dari CVS Repo: -OK-
+	    cvs co persediaan_2021
+	- ganti nama_folder:
+	    copy folder lama ke folder baru
+	    cvs add folder baru
+	    cvs remove folder lama
+	- ganti tahun pada: -OK-
+	    file manage.py
+	    file settings.py
+	    file urls.py
+	    file wsgi.py
+
+	    
