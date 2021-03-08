@@ -75,6 +75,7 @@ rel-2-3:
     - insert puskesmas paringin:
 
 rel-3-0:
+    ---45 menit
     - Pembuatan Menu Entry 2021
 	- copy folder persediaan_2020 menjadi persediaan_2021: -OK-
 	    sudo cp -r persediaan_2020 persediaan_2021 
@@ -98,5 +99,43 @@ rel-3-0:
 	    file settings.py
 	    file urls.py
 	    file wsgi.py
+	- ganti key: -OK-
+	    django-admin startproject dump2
+	- create user dan database -OK-
+	    createuser persediaan_2021 -P
+	    createdb persediaan_2021 -O persediaan_2021
+	- ganti password database -OK-
+	- edit file template: -OK-
+	    base_site.html
+	- aktifkan django pada file httpd-ssl.conf: -OK-
+	    ganti tahun
+	- restart apache2 server: -OK-
+	    sudo systemctl restart apache2
+	- edit index.html: -OK-
+	    tambah links persediaan_2021 		    
+    ---
+
+    ---30 menit
+	- restore database: -OK-
+	    psql persediaan_2021 < persediaan_2020_2021-03-09_00_22.sql
+	- edit static, ganti background: -OK-
+	    login.css
+	    base.css
+	- edit database:
+	    psql persediaan_2021
+	    REASSIGN OWNED BY persediaan_2020 TO persediaan_2021;
+	    delete from persediaan ;
+	    delete from masuk;
+	    delete from keluar;
+	    delete from transaksi;
+	    delete from django_admin_log ;
+	    ALTER SEQUENCE persediaan_id_seq RESTART;
+	    ALTER SEQUENCE django_admin_log_id_seq RESTART;
+	    ALTER SEQUENCE transaksi_id_seq RESTART;
+	- md5 test -OK-
+	- cvs tag rel-3-0 -OK-
+    ---
+	
+	
 
 	    
