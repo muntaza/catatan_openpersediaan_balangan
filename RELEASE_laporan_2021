@@ -1,0 +1,93 @@
+rel-1-0:
+    - copy folder -OK-
+    - cvs import -OK-
+    - mkdir php5_projects_persediaan_balangan_2020
+    - doas chown -R muntaza:www-data php5_projects_persediaan_balangan_2020/
+    - doas chmod -R g+w php5_projects_persediaan_balangan_2020/
+    - cvs co php5_projects_persediaan_balangan_2020
+    - doas ln -s php5_projects_persediaan_balangan_2020 projects
+    - copy isi folder kabupaten di laporan 2018 ke kabupaten_2018
+    - cvs tag rel-1-0 -OK-
+
+rel-1-1:
+
+    - edit tahun default pada kabupaten 2020 -OK-
+    - edit tahun default pada SKPD -> 2020 -OK-
+    - cvs tag rel-1-1 -OK-
+    - md5 -OK-
+
+rel-1-2:
+
+    - ganti password disdik -OK-
+    - md5 -OK-
+    - cvs tag rel-1-2 -OK-
+
+rel-1-3:
+    - md5 
+    - cvs tag rel-1-3
+    
+rel-2-0:
+    ---30 menit
+    - laporan SKPD
+    - copy folder utama SKPD: -OK-
+	sudo cp -R php5_laporan_persediaan_2020 php5_laporan_persediaan_2021
+    - chown -R www:www folder utama: -OK-
+	sudo chown -R www-data:www-data php5_laporan_persediaan_2021
+    - ganti tahun pada language: -OK-
+	admin.php
+    - hapus dir projects soft links: -OK-
+	sudo rm projects
+    - hapus dir CVS pada php5_projects_persediaan_balangan_2020: -OK-
+	sudo chown -R abdullah:www-data php5_projects_persediaan_balangan_2020
+	find -name "CVS" -exec rm -rf {} +
+    - cvs import -m "start" nama_modul nama_modul start:	
+	cvs import -m "start" php5_projects_persediaan_balangan_2021 php5_projects_persediaan_balangan_2021 start
+    - cvs co nama_modul: -OK-
+	sudo rm -rf php5_projects_persediaan_balangan_2020
+	sudo mkdir php5_projects_persediaan_balangan_2021
+	cvs co php5_projects_persediaan_balangan_2021
+    - pembuatan soft link: -OK-
+	sudo ln -s php5_projects_persediaan_balangan_2021 projects
+    - test akses link laporan SKPD 2021: -OK-
+    - edit dan jalankan chmod_plus: -OK-
+	sudo sh chmod_local_plus.sh
+    ---
+
+    ---30 menit
+    - md5 test: -OK-
+	sh md5_php5_projects_persediaan_balangan_2021.sh	
+    - edit config.php mengganti nama database: -OK-
+	find . -name "config.php" -exec sed -i -e 's/2020/2021/g' {} +	
+    - commit: -OK-
+	cvs ci -m "ganti tahun database"
+    - update tahun sampai 2025: -OK-
+	psql -h localhost  -U persediaan_2021 persediaan_2021 < tahun2.sql
+    - edit tahun default: -OK-
+	find . -name "*.xml" -exec sed -i -e 's/2020/2021/g' {} +
+    - commit: -OK-
+	cvs ci -m "ganti tahun default"
+    - md5 test: -OK-
+	sh md5_php5_projects_persediaan_balangan_2021.sh	
+    - test entry data dan cek laporan: -OK-
+    - cvs tag rel-2-0 
+    ---
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
