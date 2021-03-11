@@ -1,0 +1,37 @@
+rel-3-0:
+    ---15 menit
+    - ssh-add user cvs
+    - create folder persediaan_2021: -OK-
+	doas mkdir persediaan_2021
+	doas chown -R muntaza:www persediaan_2021
+    - cvs co persediaan_2021: -OK-
+	cvs co persediaan_2021
+	doas chown -R muntaza:www persediaan_2021
+    - create user dan database: -OK-
+        createuser persediaan_2021 -P
+	createdb persediaan_2021 -O persediaan_2021
+    - restore database: -OK-
+	psql persediaan_2021 < persediaan_2020_2021-03-09_00_22.sql
+    - edit database:
+        psql persediaan_2021
+        REASSIGN OWNED BY persediaan_2020 TO persediaan_2021;
+        delete from persediaan;
+        delete from masuk;
+        delete from keluar;
+        delete from transaksi;
+        delete from django_admin_log ;
+        ALTER SEQUENCE persediaan_id_seq RESTART;
+        ALTER SEQUENCE django_admin_log_id_seq RESTART;
+        ALTER SEQUENCE transaksi_id_seq RESTART;
+    - edit persediaan.html
+    - edit httpd-ssl.conf: -OK-
+	aktifkan persediaan_2021
+    - restart server: -OK-
+	doas rcctl restart apache2
+    - test login
+    - pkill ssh-agent
+    - exit
+    ---
+
+    
+    
