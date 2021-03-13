@@ -1,5 +1,5 @@
 rel-3-0:
-    ---15 menit
+    ---15 menit -OK-
     - ssh-add user cvs
     - create folder persediaan_2021: -OK-
 	doas mkdir persediaan_2021

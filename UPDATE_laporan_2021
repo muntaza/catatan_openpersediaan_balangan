@@ -20,27 +20,34 @@ rel-1-2:
     - cvs up
 
 rel-2-0:
-    ---15 menit
+    ---30 menit
+    ---deploy laporan SKPD 2021
     - ssh-add cvs user: -OK-
-    - copy folder laporan utama SKPD: 
+    - copy folder laporan utama SKPD: -OK-
 	doas cp -R php5_laporan_persediaan_2020 php5_laporan_persediaan_2021
-    - chown -R www:www folder utama: 
+    - chown -R www:www folder utama: -OK-
 	doas chown -R www:www php5_laporan_persediaan_2021
-    - ganti tahun pada language: 
+    - ganti tahun pada language: -OK-
 	admin.php
     - hapus dir projects soft links: 
 	doas rm projects
-    - cvs co nama_modul: 
+    - hapus dir projects asli:
+	doas rm -rf php5_projects_persediaan_balangan_2020
+    - buat direktori projects asli: -OK-
 	doas mkdir php5_projects_persediaan_balangan_2021
+    - edit dan jalankan chmod_plus: -OK-
+	doas sh chmod_plus.sh
+    - cvs co nama_modul: 
 	cvs co php5_projects_persediaan_balangan_2021
     - pembuatan soft link: -OK-
 	doas ln -s php5_projects_persediaan_balangan_2021 projects
     - test akses link laporan SKPD 2021: 
-    - edit dan jalankan chmod_plus: 
-	doas sh chmod_local_plus.sh
     - update tahun sampai 2025: -OK-
 	git pull
 	psql -h localhost  -U persediaan_2021 persediaan_2021 < tahun2.sql
+    - pkill ssh-agent
+    - exit
+    ---
     
 
 

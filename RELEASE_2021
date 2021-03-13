@@ -75,7 +75,7 @@ rel-2-3:
     - insert puskesmas paringin:
 
 rel-3-0:
-    ---45 menit
+    ---45 menit -OK-
     - Pembuatan Menu Entry 2021
 	- copy folder persediaan_2020 menjadi persediaan_2021: -OK-
 	    sudo cp -r persediaan_2020 persediaan_2021 

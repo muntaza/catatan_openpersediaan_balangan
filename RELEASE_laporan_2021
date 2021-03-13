@@ -54,6 +54,7 @@ rel-2-0:
     ---
 
     ---30 menit
+    - laporan SKPD
     - md5 test: -OK-
 	sh md5_php5_projects_persediaan_balangan_2021.sh	
     - edit config.php mengganti nama database: -OK-
@@ -73,19 +74,50 @@ rel-2-0:
     ---
     
 
+rel-2-1:
+    ---15 menit
+    - laporan Sekolah 2021
+    - copy folder utama SKPD: 
+	sudo cp -r php5_laporan_persediaan_sekolah_2020 php5_laporan_persediaan_sekolah_2021
+    - chown -R www:www folder utama: -OK-
+	sudo chown -R www-data:www-data php5_laporan_persediaan_sekolah_2021
+    - ganti tahun pada language: -OK-
+	admin.php
+    - hapus dir projects soft links: -OK-
+	sudo rm projects
+    - hapus dir CVS pada php5_projects_persediaan_sekolah_balangan_2020: -OK-
+	sudo chown -R abdullah:www-data php5_projects_persediaan_balangan_sekolah_2020
+	find -name "CVS" -exec rm -rf {} +
+    - cvs import -m "start" nama_modul nama_modul start:	
+	cvs import -m "start" php5_projects_persediaan_sekolah_balangan_2021 php5_projects_persediaan_sekolah_balangan_2021 start
+    ---
 
-
-
-
-
-
-
-
-
-
-
-
-
+    ---30 menit
+    - buat direktory projects_asli: -OK-
+	sudo rm -rf php5_projects_persediaan_balangan_sekolah_2020
+	sudo mkdir php5_projects_persediaan_sekolah_balangan_2021
+    - edit dan jalankan chmod_plus: -OK-
+	sudo sh chmod_local_plus.sh
+    - cvs co nama_modul: 
+	cvs co php5_projects_persediaan_sekolah_balangan_2021
+    - pembuatan soft link: 
+	sudo ln -s php5_projects_persediaan_sekolah_balangan_2021 projects
+    - test akses link laporan Sekolah 2021: 
+    - md5 test: -OK-
+	sh md5_php5_projects_persediaan_sekolah_balangan_2021.sh	
+    - edit config.php mengganti nama database: 
+	find . -name "config.php" -exec sed -i -e 's/2020/2021/g' {} +	
+    - commit: 
+	cvs ci -m "ganti tahun database"
+    - edit tahun default: 
+	find . -name "*.xml" -exec sed -i -e 's/2020/2021/g' {} +
+    - commit: 
+	cvs ci -m "ganti tahun default"
+    - md5 test: -OK-
+	sh md5_php5_projects_persediaan_sekolah_balangan_2021.sh	
+    - test entry data dan cek laporan: 
+    - cvs tag rel-2-1 
+    ---
 
 
 
