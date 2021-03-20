@@ -34,4 +34,12 @@ rel-3-0:
     ---
 
     
+rel-3-1:
+    psql -U persediaan_2021 persediaan_2021 -h localhost
+    persediaan_2021=> UPDATE barang SET id_jenis_barang = 17 WHERE id_jenis_barang = 14;
+    UPDATE 2026
+    persediaan_2021=> UPDATE barang SET id_jenis_barang = 8 WHERE id_jenis_barang = 15;
+    UPDATE 2373
+    persediaan_2021=> 
+
     
