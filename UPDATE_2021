@@ -43,3 +43,8 @@ rel-3-1:
     persediaan_2021=> 
 
     
+rel-3-2:
+    psql -U persediaan_2021 persediaan_2021 -h localhost
+    persediaan_2021=> UPDATE barang SET id_jenis_barang = 17 WHERE id_jenis_barang = 3;
+    UPDATE 750
+    
