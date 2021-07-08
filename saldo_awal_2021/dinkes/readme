@@ -1,0 +1,3 @@
+Insert saldo awal Dinkes:
+
+psql -h localhost -U persediaan_2021 persediaan_2021 <
