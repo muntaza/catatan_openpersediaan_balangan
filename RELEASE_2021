@@ -136,5 +136,65 @@ rel-3-0:
 	- cvs tag rel-3-0 -OK-
     ---
 	
+rel-3-3:
+    - Pembuatan Menu Entry 2021p0
+	- copy folder persediaan_2021 menjadi persediaan_2021p0: -OK-
+	    sudo cp -r persediaan_2021 persediaan_2021p0 
+	- hapus folder CVS: -OK-
+	    sudo chown -R abdullah:www-data persediaan_2021p0 
+	    find . -type d -name "CVS" -exec rm -rf {} +
+	- import CVS: -OK-
+	    cvs import -m "start" persediaan_2021p0 persediaan_2021p0 start
+	- delete folder persediaan_2021p0: -OK-
+	    sudo rm -rf persediaan_2021p0
+	    sudo mkdir persediaan_2021p0
+	    sudo chown -R abdullah:www-data persediaan_2021p0
+	- ambil persediaan_2021p0 dari CVS Repo: -OK-
+	    cvs co persediaan_2021p0
+	- ganti nama folder persediaan_2021: -OK-
+	    copy folder lama ke folder baru
+		cp -r persediaan_2021 persediaan_2021p0
+	    cvs add folder baru
+		cvs add persediaan_2021p0
+		cvs add persediaan_2021p0/*.py
+	    cvs remove folder lama
+		rm __init__.py settings.py urls.py wsgi.py
+		cvs remove __init__.py settings.py urls.py wsgi.py
+		cvs up persediaan_2021
+	- ganti tahun pada: -OK-
+	    file manage.py
+	    file settings.py
+	    file urls.py
+	    file wsgi.py
+	- ganti key: -OK-
+	    django-admin startproject dump2
+	- create user dan database: -OK-
+	    createuser persediaan_2021p0 -P
+	    createdb persediaan_2021p0 -O persediaan_2021p0
+	- ganti password database -OK-
+	- edit file template: -OK-
+	    base_site.html 
+	- aktifkan django pada file httpd-ssl.conf:
+	    ganti tahun
+	- restart apache2 server:
+	    sudo systemctl restart apache2
+	- edit index.html:
+	    tambah links persediaan_2021p0 		    
+    ---
+
+    ---30 menit
+	- restore database:
+	    psql persediaan_2021p0 < persediaan.sql
+	- edit static, ganti background:
+	    login.css
+	    base.css
+	- edit database:
+	    psql persediaan_2021p0
+	    REASSIGN OWNED BY persediaan_2021 TO persediaan_2021p0;
+	- md5 test
+	- cvs tag rel-3-0
+    ---
+	
 rel-3-1:
+	    
 	    
