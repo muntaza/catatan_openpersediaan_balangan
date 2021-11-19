@@ -174,24 +174,24 @@ rel-3-3:
 	- ganti password database -OK-
 	- edit file template: -OK-
 	    base_site.html 
-	- aktifkan django pada file httpd-ssl.conf:
+	- aktifkan django pada file httpd-ssl.conf: -OK-
 	    ganti tahun
-	- restart apache2 server:
+	- restart apache2 server: -OK-
 	    sudo systemctl restart apache2
 	- edit index.html:
 	    tambah links persediaan_2021p0 		    
     ---
 
     ---30 menit
-	- restore database:
+	- restore database: -OK-
 	    psql persediaan_2021p0 < persediaan.sql
 	- edit static, ganti background:
 	    login.css
 	    base.css
-	- edit database:
+	- edit database: -OK-
 	    psql persediaan_2021p0
 	    REASSIGN OWNED BY persediaan_2021 TO persediaan_2021p0;
-	- md5 test
+	- md5 test -OK-
 	- cvs tag rel-3-0
     ---
 	

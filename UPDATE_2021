@@ -50,32 +50,32 @@ rel-3-2:
     
 rel-3-3:
     - ssh-add user cvs
-    - create folder persediaan_2021p0: -OK-
+    - create folder persediaan_2021p0: 
 	doas mkdir persediaan_2021p0
 	doas chown -R muntaza:www persediaan_2021p0
-    - cvs co persediaan_2021p0: -OK-
+    - cvs co persediaan_2021p0: 
 	cvs co persediaan_2021p0
 	doas chown -R muntaza:www persediaan_2021p0
-    - create user dan database: -OK-
+    - create user dan database: 
         createuser persediaan_2021p0 -P
 	createdb persediaan_2021p0 -O persediaan_2021p0
-    - restore database: -OK-
+    - restore database: 
 	psql persediaan_2021p0 < persediaan.sql
     - edit database:
         psql persediaan_2021p0
         REASSIGN OWNED BY persediaan_2021 TO persediaan_2021p0;
-        delete from persediaan;
-        delete from masuk;
-        delete from keluar;
-        delete from transaksi;
-        delete from django_admin_log ;
-        ALTER SEQUENCE persediaan_id_seq RESTART;
-        ALTER SEQUENCE django_admin_log_id_seq RESTART;
-        ALTER SEQUENCE transaksi_id_seq RESTART;
+#        delete from persediaan;
+#        delete from masuk;
+#        delete from keluar;
+#        delete from transaksi;
+#        delete from django_admin_log ;
+#        ALTER SEQUENCE persediaan_id_seq RESTART;
+#        ALTER SEQUENCE django_admin_log_id_seq RESTART;
+#        ALTER SEQUENCE transaksi_id_seq RESTART;
     - edit persediaan.html
-    - edit httpd-ssl.conf: -OK-
+    - edit httpd-ssl.conf: 
 	aktifkan persediaan_2021p0
-    - restart server: -OK-
+    - restart server: 
 	doas rcctl restart apache2
     - test login
     - pkill ssh-agent
