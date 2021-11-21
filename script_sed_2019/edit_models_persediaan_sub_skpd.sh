@@ -265,3 +265,6 @@ cat models_sub_skpd_smpn1_awayan.py | sed -e s/SMPN1Awayan/KelurahanParinginKota
 cat models_sub_skpd_smpn1_awayan.py | sed -e s/SMPN1Awayan/RumahPintar/g | sed -e s/SMPN\ 1\ Awayan/Rumah\ Pintar/g >> model_gabungan_sub_skpd
 cat models_sub_skpd_smpn1_awayan.py | sed -e s/SMPN1Awayan/TKHarapanBangsa/g | sed -e s/SMPN\ 1\ Awayan/TK\ Harapan\ Bangsa/g >> model_gabungan_sub_skpd
 cat models_sub_skpd_smpn1_awayan.py | sed -e s/SMPN1Awayan/SMPNSatuAtapLibaruSungkai/g | sed -e s/SMPN\ 1\ Awayan/SMPN\ Satu\ Atap\ Libaru\ Sungkai/g >> model_gabungan_sub_skpd
+
+#penambahan 2021
+cat models_sub_skpd_smpn1_awayan.py | sed -e s/SMPN1Awayan/SDKecilAmbatunin/g | sed -e s/SMPN\ 1\ Awayan/SD\ Kecil\ Ambatunin/g >> model_gabungan_sub_skpd
