@@ -83,4 +83,22 @@ rel-3-3:
     ---
 
     
-rel-3-1:
+rel-3-4:
+    - ssh-add
+    - cvs up
+    - python manage.py migrate
+    - doas rcctl restart apache2
+    - test tampilan
+    - tambah group
+
+rel-3-5:
+    - 26 Agustus 2021
+    - cvs up
+    - python manage.py migrate
+    - doas rcctl restart apache2
+    - test tampilan
+    - tambah group
+
+    - bug fix buku persediaan sekolah error:
+	- psql persediaan_2021 < gabungan_persediaan_barang5_sub_skpd.sql
+	- psql persediaan_2021p0 < gabungan_persediaan_barang5_sub_skpd.sql

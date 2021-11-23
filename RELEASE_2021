@@ -195,6 +195,42 @@ rel-3-3:
 	- cvs tag rel-3-0
     ---
 	
-rel-3-1:
+rel-3-4:
+    ---- 
+	- tambah sekolah SD Kecil Ambatunin: -OK-
+	    - tambah sub skpd
+	    - id 618
+	    - edit script edit_models
+	    - jalankan script edit_models
+	    - edit  script edit admin subskpd
+	    - jalankan script edit admin subskpd
+	    - jalankan script gabung
+	    - cek diff
+	    - manage.py makemigrations
+	    - manage.py migrate
+	    - cvs add
+	- test md5 -OK-
+	- cvs tag rel-3-4 -OK-
+
+rel-3-5:
+    --- 
+	- perubahan warna base dan login pada 26 Agustus:
+	    base.css dan login.css:
+		background: #9ff;
+	- tambah sekolah SD Kecil Ambatunin 26 Agustus:
+	    - tambah sub skpd -OK-
+		prod dan devel
+	    - copy models.py dari kabupaten dari p0
+	    - copy admin.py dari subskpd dari p0
+	    - copy migrations kabupaten dari p0
+	    - python manage.py migrate
+	    - sh clean.sh
+	    - cvs add
+	    - md5 test
+	- bug fix buku persediaan sekolah error:
+	    psql persediaan_2021 < gabungan_persediaan_barang5_sub_skpd.sql
+	    psql persediaan_2021p0 < gabungan_persediaan_barang5_sub_skpd.sql
+	     
+
 	    
 	    

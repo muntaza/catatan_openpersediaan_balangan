@@ -72,6 +72,7 @@ rel-2-1:
 	doas sh chmod_plus.sh
     - cvs co nama_modul: 
 	cvs co php5_projects_persediaan_balangan_2021p0
+	doas sh chmod_plus.sh
     - pembuatan soft link: -OK-
 	doas ln -s php5_projects_persediaan_balangan_2021p0 projects
     - test akses link laporan SKPD 2021p0: 

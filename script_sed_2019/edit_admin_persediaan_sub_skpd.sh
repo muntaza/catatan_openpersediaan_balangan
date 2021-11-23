@@ -241,5 +241,5 @@ cat admin_sub_skpd.py | sed -e s/SMPN1Awayan/TKHarapanBangsa/g | sed -e s/98/300
 cat admin_sub_skpd.py | sed -e s/SMPN1Awayan/SMPNSatuAtapLibaruSungkai/g | sed -e s/98/614/g >> admin_gabungan_sub_skpd
 
 #penambahan 2021
-cat admin_sub_skpd.py | sed -e s/SMPN1Awayan/SDKecilAmbatunin/g | sed -e s/98/614/g >> admin_gabungan_sub_skpd
+cat admin_sub_skpd.py | sed -e s/SMPN1Awayan/SDKecilAmbatunin/g | sed -e s/98/618/g >> admin_gabungan_sub_skpd
 
