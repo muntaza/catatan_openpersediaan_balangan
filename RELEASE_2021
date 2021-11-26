@@ -227,9 +227,7 @@ rel-3-5:
 	    - sh clean.sh
 	    - cvs add
 	    - md5 test
-	- bug fix buku persediaan sekolah error:
-	    psql persediaan_2021 < gabungan_persediaan_barang5_sub_skpd.sql
-	    psql persediaan_2021p0 < gabungan_persediaan_barang5_sub_skpd.sql
+    
 	     
 
 	    
