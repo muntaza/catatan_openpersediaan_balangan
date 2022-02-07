@@ -172,29 +172,29 @@ rel-2-1:
     ---
     
 
-rel-2-1:
+rel-2-2:
     ---15 menit
     - laporan Sekolah 2021p0
-    - copy folder utama SKPD: 
+    - copy folder utama SKPD: -OK-
 	sudo cp -r php5_laporan_persediaan_sekolah_2021 php5_laporan_persediaan_sekolah_2021p0
-    - chown -R www:www folder utama: -OK-
+    - chown -R www:www folder utama: 
 	sudo chown -R www-data:www-data php5_laporan_persediaan_sekolah_2021p0
-    - ganti tahun pada language: -OK-
+    - ganti tahun pada language: 
 	admin.php
-    - hapus dir projects soft links: -OK-
+    - hapus dir projects soft links: 
 	sudo rm projects
     - hapus dir CVS pada php5_projects_persediaan_sekolah_balangan_2021: -OK-
-	sudo chown -R abdullah:www-data php5_projects_persediaan_balangan_sekolah_2021
+	sudo chown -R abdullah:www-data php5_projects_persediaan_sekolah_balangan_2021
 	find -name "CVS" -exec rm -rf {} +
-    - cvs import -m "start" nama_modul nama_modul start:	
+    - cvs import -m "start" nama_modul nama_modul start: -OK-
 	cvs import -m "start" php5_projects_persediaan_sekolah_balangan_2021p0 php5_projects_persediaan_sekolah_balangan_2021p0 start
     ---
 
     ---30 menit
-    - buat direktory projects_asli: -OK-
-	sudo rm -rf php5_projects_persediaan_balangan_sekolah_2021
+    - buat direktory projects_asli: 
+	sudo rm -rf php5_projects_persediaan_sekolah_balangan_2021
 	sudo mkdir php5_projects_persediaan_sekolah_balangan_2021p0
-    - edit dan jalankan chmod_plus: -OK-
+    - edit dan jalankan chmod_plus: 
 	sudo sh chmod_local_plus.sh
     - cvs co nama_modul: 
 	cvs co php5_projects_persediaan_sekolah_balangan_2021p0
@@ -211,10 +211,10 @@ rel-2-1:
 	find . -name "*.xml" -exec sed -i -e 's/2021/2021p0/g' {} +
     - commit: 
 	cvs ci -m "ganti tahun default"
-    - md5 test: -OK-
+    - md5 test: 
 	sh md5_php5_projects_persediaan_sekolah_balangan_2021p0.sh	
     - test entry data dan cek laporan: 
-    - cvs tag rel-2-1 
+    - cvs tag rel-2-2 
     ---
 
 

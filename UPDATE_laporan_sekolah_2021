@@ -30,3 +30,29 @@ rel-2-1:
     - buat modul test md5 untuk laporan_persediaan_sekolah_2021
     - buat backup database persediaan 2021
     - rsync backup database persediaan 2021
+
+rel-2-2:
+    ---
+    - deploy laporan Sekolah 2021p0
+    - ssh-add user cvs
+    - copy folder utama SKPD: 
+	doas cp -r php5_laporan_persediaan_sekolah_2021 php5_laporan_persediaan_sekolah_2021p0
+    - chown -R www:www folder utama: 
+	doas chown -R www:www php5_laporan_persediaan_sekolah_2021p0
+    - ganti tahun pada language: 
+	admin.php
+    - hapus dir projects soft links: 
+	doas rm -rf projects
+    - buat direktory projects_asli: 
+	doas rm -rf php5_projects_persediaan_balangan_sekolah_2021
+	doas mkdir php5_projects_persediaan_sekolah_balangan_2021p0
+    - edit dan jalankan chmod_plus: 
+	doas sh chmod_local_plus.sh
+    - cvs co nama_modul: 
+	cvs co php5_projects_persediaan_sekolah_balangan_2021p0
+    - pembuatan soft link: 
+	doas ln -s php5_projects_persediaan_sekolah_balangan_2021p0 projects
+    - test akses link laporan Sekolah 2021p0: 
+    - pkill ssh-agent
+    - exit
+
