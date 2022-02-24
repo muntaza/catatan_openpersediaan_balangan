@@ -1,0 +1,8 @@
+Ambil dari Daftar Persediaan SKPD
+jangan lupa sortir dengan Provinsi
+Delete hasil penjumlahan
+asal usul = saldo awal
+
+masuk dari saldo awal ke gudang farmasi 2 Januari 2021
+
+#psql -h localhost -U persediaan_2021p0 persediaan_2021p0 <
